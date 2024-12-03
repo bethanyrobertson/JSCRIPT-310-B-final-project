@@ -32,6 +32,8 @@ One or more fetch requests to a 3rd party API
 This connects to a random color API to generate a fill for the polygon
 No API key needed
 
+https://publicapis.io/the-color-api
+
     function getRandomColor() {
         fetch(`https://www.thecolorapi.com/random?format=json`)
             .then(response => response.json())
