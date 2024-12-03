@@ -2,13 +2,8 @@
 This web-based design tool allows users to generate a polygon with the following requirements met:
 
 
+One or more timing functions
 
-
-One or more Classes (must use static methods and/or prototype methods)
-
-Write testable code, use Jasmine unit tests
-
-• One or more timing functions
 Upon clicking the "Animate" button, this eventListener animates the polygon to rotate
 
       animateButton.addEventListener("click", () => {
@@ -32,7 +27,7 @@ Upon clicking the "Animate" button, this eventListener animates the polygon to r
           }
       });
 
-• One or more fetch requests to a 3rd party API
+One or more fetch requests to a 3rd party API
 
 This connects to a random color API to generate a fill for the polygon
 No API key needed
@@ -45,13 +40,19 @@ No API key needed
                 console.log(`RGB: ${data.rgb.value}`);
                 console.log(`HSL: ${data.hsl.value}`);
                 
-                // Assuming you want to change the polygon color
+                
                 const polygon = document.getElementById('dynamicPolygon');
                 polygon.style.fill = data.rgb.value;
             });
     }
 
 Sets, updates, or changes local storage
+Logs the values of each randomly generated color in the polygon
+
+      function storeCurrentColor() {
+          window.localStorage.setItem("color", polygon.style.fill);
+      }
+
 
 Contains form fields, validates those fields
 
