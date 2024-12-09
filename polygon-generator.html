@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+      <h2>Polygon Generator</h2>
+        <div class="pattern-container">
+    <svg id="patternSvg" height="200" width="300" xmlns="http://www.w3.org/2000/svg">
+  <polygon id="dynamicPolygon"/>
+</svg>
+        </div>
+       
+         
+          <div class="container" id = "colorSelector" style={"display": "inline"} >
+              <div id="polygon">
+                <h3>Polygon Color</h3>
+      <button id="randomButton">Random</button>
+             </div>
+          
+            
+            
+        <div id="backgroundColor">
+    <h3>Background Color</h3>
+    <div id="colorPicker" class="color-picker"> <section class="palette">
+          <button class="palette-btn palette-btn--prpl" type="button"></button>
+          <button class="palette-btn palette-btn--red" type="button"></button>
+          <button class="palette-btn palette-btn--orange" type="button"></button>
+          <button class="palette-btn palette-btn--yellow" type="button"></button>
+          <button class="palette-btn palette-btn--pink" type="button"></button>
+          <button class="palette-btn palette-btn--purple" type="button"></button>
+          <button class="palette-btn palette-btn--indigo" type="button"></button>
+          <button class="palette-btn palette-btn--blue" type="button"></button>
+          <button class="palette-btn palette-btn--teal" type="button"></button>
+          <button class="palette-btn palette-btn--bluegray" type="button"></button>
+          <button class="palette-btn palette-btn--green" type="button"></button>
+          <button class="palette-btn palette-btn--toxic" type="button"></button>
+          <button class="palette-btn palette-btn--lime" type="button"></button>
+          <button class="palette-btn palette-btn--white" type="button"></button>
+          <button class="palette-btn palette-btn--black" type="button"></button>
+      
+        </section></div>
+</div>
+ 
+                
+            </div>
+                
+        
+           
+            <div class="control">
+              <h3>Number of Sides</h3>
+             
+                <input type="range" id="numSides" class="slider" min="3" max="20" value="3" step="1" required>
+   <output name="rangeVal" id="rangeVal">3</output>
+            
+            </div>
+       
+      
+     
+      
+       <div class="buttons">
+      <button id="generateButton">Generate</button>
+         <button id="animateButton">Animate</button>
+    </div>
+      </div>
+      
+    <script src="script.js"></script>
+ 
+</body>
+</html>
