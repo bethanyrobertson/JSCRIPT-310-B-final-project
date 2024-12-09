@@ -3,7 +3,7 @@ const randomButton = document.getElementById("randomButton");
 const animateButton = document.getElementById("animateButton");
 
 
-//color picker
+//background color picker
 const colorPaletteButtons = document.querySelectorAll('.color-picker .palette-btn');
 const patternSvg = document.getElementById('patternSvg');
 
@@ -14,25 +14,15 @@ colorPaletteButtons.forEach(colorBtn => {
     });
 });
 
-//polygon color
-function getRandomColor() {
-    fetch(`https://www.thecolorapi.com/random?format=json`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(`Name: ${data.name.value}`);
-            console.log(`RGB: ${data.rgb.value}`);
-            console.log(`HSL: ${data.hsl.value}`);
-            
-            const polygon = document.getElementById('dynamicPolygon');
-            polygon.style.fill = data.rgb.value;
-        });
-}
 
-randomButton.addEventListener("click", getRandomColor);
-
+//draw polygon
  function drawPolygon() {
     const sides = parseInt(document.getElementById('numSides').value);
-    if (sides < 3) return;
+    //validate number of sides from input
+     if (isNaN(sides) || sides < 3) {
+        console.error('Invalid number of sides. Must be at least 3.');
+        return;
+    }
     
     const radius = 60; 
     const centerX = 150; 
@@ -80,6 +70,7 @@ animateButton.addEventListener("click", () => {
     }
 });
 
+//polygon color
 //updates local storage
 function saveColorToStorage(colorData) {
     const savedColors = JSON.parse(localStorage.getItem('colorHistory') || '[]');
@@ -110,6 +101,8 @@ function getRandomColor() {
 }
 
 
+randomButton.addEventListener("click", getRandomColor);
+
 //slider range number of sides
 const scale = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
@@ -131,4 +124,3 @@ numSides.addEventListener("input", (e) => {
   label.style.left = `${left}px`;
   label.innerHTML = value;
 });
-
