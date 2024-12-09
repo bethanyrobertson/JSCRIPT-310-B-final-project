@@ -81,8 +81,32 @@ animateButton.addEventListener("click", () => {
 });
 
 //updates local storage
-function storeCurrentColor() {
-    window.localStorage.setItem("color", polygon.style.fill);
+function saveColorToStorage(colorData) {
+    const savedColors = JSON.parse(localStorage.getItem('colorHistory') || '[]');
+    savedColors.unshift(colorData);
+    localStorage.setItem('colorHistory', JSON.stringify(savedColors.slice(0, 10)));
+}
+
+function getRandomColor() {
+    fetch(`https://www.thecolorapi.com/random?format=json`)
+        .then(response => response.json())
+        .then(data => {
+            const colorData = {
+                name: data.name.value,
+                rgb: data.rgb.value,
+                hsl: data.hsl.value,
+                timestamp: new Date().toISOString()
+            };
+            
+            saveColorToStorage(colorData);
+
+            console.log(`Name: ${data.name.value}`);
+            console.log(`RGB: ${data.rgb.value}`);
+            console.log(`HSL: ${data.hsl.value}`);
+            
+            const polygon = document.getElementById('dynamicPolygon');
+            polygon.style.fill = data.rgb.value;
+        });
 }
 
 
