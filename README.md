@@ -1,32 +1,9 @@
 # JSCRIPT-310-B-final-project
 ![polygon-generator](https://github.com/user-attachments/assets/367f45b4-43cb-495e-a81d-b1ba667d6b74)
+
+
 This web-based design tool allows users to generate a polygon with the following requirements met:
 
-
-One or more timing functions
-
-Upon clicking the "Animate" button, this eventListener animates the polygon to rotate
-
-      animateButton.addEventListener("click", () => {
-          const polygon = document.getElementById('dynamicPolygon');
-          
-          if (polygon.innerHTML.includes('animateTransform')) {
-            
-              polygon.innerHTML = '';
-          } else {
-             
-              polygon.innerHTML = `
-                  <animateTransform
-                      attributeName="transform"
-                      attributeType="XML"
-                      type="rotate"
-                      from="0 150 100"
-                      to="360 150 100"
-                      dur="10s"
-                      repeatCount="indefinite" />
-              `;
-          }
-      });
 
 One or more fetch requests to a 3rd party API
 
@@ -77,3 +54,27 @@ Contains form fields, validates those fields
           }
           rest of code....
           
+One or more timing functions
+
+Upon clicking the "Animate" button, this eventListener animates the polygon to rotate
+
+      animateButton.addEventListener("click", () => {
+          const polygon = document.getElementById('dynamicPolygon');
+          
+          if (polygon.innerHTML.includes('animateTransform')) {
+            
+              polygon.innerHTML = '';
+          } else {
+             
+              polygon.innerHTML = `
+                  <animateTransform
+                      attributeName="transform"
+                      attributeType="XML"
+                      type="rotate"
+                      from="0 150 100"
+                      to="360 150 100"
+                      dur="10s"
+                      repeatCount="indefinite" />
+              `;
+          }
+      });
