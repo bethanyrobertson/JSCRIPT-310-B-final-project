@@ -41,7 +41,7 @@ https://publicapis.io/the-color-api
 
 <img width="1445" alt="Screenshot 2024-12-09 at 7 00 59 PM" src="https://github.com/user-attachments/assets/2b162855-c3ed-477a-bc37-e6375f01d4ce">
 
-Sets, updates, or changes local storage
+Updates local storage
 Logs the values of each randomly generated color in the polygon
 
      function saveColorToStorage(colorData) {
@@ -57,6 +57,8 @@ Logs the values of each randomly generated color in the polygon
 
 Contains form fields, validates those fields
 
+Number of sides slider range input. Validates that at least 3 sides are chosen. 
+
       function drawPolygon() {
           const sides = parseInt(document.getElementById('numSides').value);
            if (isNaN(sides) || sides < 3) {
@@ -70,9 +72,9 @@ Contains form fields, validates those fields
 
 <img width="161" alt="Screenshot 2024-12-09 at 7 03 39 PM" src="https://github.com/user-attachments/assets/355aeec1-18d5-419e-bf3f-541571425abc">
           
-One or more timing functions
+Timing function
 
-Upon clicking the "Animate" button, this eventListener animates the polygon to rotate
+Upon clicking the "Animate" button, this eventListener animates the polygon to rotate or stops the rotation.
 
       animateButton.addEventListener("click", () => {
           const polygon = document.getElementById('dynamicPolygon');
