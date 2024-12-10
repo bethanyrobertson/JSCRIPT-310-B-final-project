@@ -9,6 +9,7 @@ One or more fetch requests to a 3rd party API
 
 This connects to a random color API to generate a fill for the polygon
 No API key needed
+<img width="158" alt="Screenshot 2024-12-09 at 7 03 15 PM" src="https://github.com/user-attachments/assets/e14d4de4-600c-48c4-a11a-e6425084610a">
 
 https://publicapis.io/the-color-api
 
@@ -34,6 +35,9 @@ https://publicapis.io/the-color-api
               });
       }
 
+-------------------------------------------------------------------------------------------------------      
+
+<img width="1445" alt="Screenshot 2024-12-09 at 7 00 59 PM" src="https://github.com/user-attachments/assets/2b162855-c3ed-477a-bc37-e6375f01d4ce">
 
 Sets, updates, or changes local storage
 Logs the values of each randomly generated color in the polygon
@@ -44,6 +48,11 @@ Logs the values of each randomly generated color in the polygon
     localStorage.setItem('colorHistory', JSON.stringify(savedColors.slice(0, 10)));
 }
 
+
+-------------------------------------------------------------------------------------------------------
+
+<img width="333" alt="Screenshot 2024-12-09 at 7 03 25 PM" src="https://github.com/user-attachments/assets/3b5f6788-16cf-4211-91f6-e046ce2ee2fd">
+
 Contains form fields, validates those fields
 
       function drawPolygon() {
@@ -53,6 +62,11 @@ Contains form fields, validates those fields
               return;
           }
           rest of code....
+
+
+-------------------------------------------------------------------------------------------------------
+
+<img width="161" alt="Screenshot 2024-12-09 at 7 03 39 PM" src="https://github.com/user-attachments/assets/355aeec1-18d5-419e-bf3f-541571425abc">
           
 One or more timing functions
 
