@@ -7,9 +7,11 @@ This web-based design tool allows users to generate a polygon with the following
 
 
 One or more fetch requests to a 3rd party API
-<img width="158" alt="Screenshot 2024-12-09 at 7 03 15 PM" src="https://github.com/user-attachments/assets/e14d4de4-600c-48c4-a11a-e6425084610a">
+
 This connects to a random color API to generate a fill for the polygon
 No API key needed
+
+<img width="158" alt="Screenshot 2024-12-09 at 7 03 15 PM" src="https://github.com/user-attachments/assets/e14d4de4-600c-48c4-a11a-e6425084610a">
 
 https://publicapis.io/the-color-api
 
