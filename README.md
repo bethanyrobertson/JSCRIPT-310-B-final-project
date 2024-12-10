@@ -68,6 +68,9 @@ Number of sides slider range input. Validates that at least 3 sides are chosen.
           rest of code....
 
 
+Calculates the vertices of the polygon
+Stores each point as a string "x,y"
+The SVG element is updated to display the new shape
 -------------------------------------------------------------------------------------------------------
 
 <img width="161" alt="Screenshot 2024-12-09 at 7 03 39 PM" src="https://github.com/user-attachments/assets/355aeec1-18d5-419e-bf3f-541571425abc">
@@ -96,6 +99,14 @@ Upon clicking the "Animate" button, this eventListener animates the polygon to r
               `;
           }
       });
+
+This is SVG animation markup that:
+• Uses animateTransform to create a transformation animation
+• Rotates the polygon (type="rotate")
+• Starts from 0 degrees and rotates to 360 degrees
+• The rotation center point is at coordinates (150, 100)
+• Takes 10 seconds to complete one rotation (dur="10s")
+• Repeats forever (repeatCount="indefinite")- until button is pressed again
 
 -------------------------------------------------------------------------------------------------------
 
